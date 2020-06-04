@@ -6,8 +6,7 @@ os:
   - windows
 
 arch:
-  - x64
-  - x86
+  - amd64 
   - arm64
 
 julia:
@@ -15,17 +14,9 @@ julia:
   - nightly
 
 matrix: 
-  allow_failures:
-    - arch: arm64
   exclude:
     - os: osx
       arch: x86
-    - os: osx
-      arch: arm64
-    - os: windows
-      arch: arm64
-    - julia: nightly
-      arch: arm64
 
 notifications:
   email: false
